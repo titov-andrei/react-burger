@@ -1,8 +1,11 @@
 import React from "react";
-import restaurants from '../sample-restaurants'
+import restaurants from "../sample-restaurants";
 
 class Landing extends React.Component {
   render() {
+    restaurants.map(restaurant => {
+      console.log(restaurant.title);
+    })
     return (
       <div className="restaurant_select">
         <div className="restaurant_select_top">
@@ -14,9 +17,7 @@ class Landing extends React.Component {
         </div>
         <div className="restaurant_select_bottom">
           <ul>
-            <li>rest 1</li>
-            <li>rest 2</li>
-            <li>rest 3</li>
+            {}
           </ul>
         </div>
         <button>Перейти в ресторан</button>
