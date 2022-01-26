@@ -1,9 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
-class Landing extends React.Component {
-  render() {
-    return <div>Hello APP!</div>;
-  }
-}
+import Landing from './components/Landing';
 
-render(<p>Hello!</p>, document.querySelector("#root"));
+
+
+render(<Landing />, document.querySelector("#root"));
