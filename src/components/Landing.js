@@ -2,7 +2,13 @@ import React from "react";
 
 class Landing extends React.Component {
   render() {
-    return <div>Hello App!</div>;
+    return (
+      <div>
+        <div>
+          <div>Выбери ресторан</div>
+        </div>
+      </div>
+    );
   }
 }
 
