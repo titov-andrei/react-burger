@@ -2,6 +2,11 @@ import React from "react";
 import restaurants from "../sample-restaurants";
 
 class Landing extends React.Component {
+  state = {
+    display: false,
+    title: '',
+    url: ''
+  };
   render() {
     return (
       <div className="restaurant_select">
