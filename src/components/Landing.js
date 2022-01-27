@@ -7,8 +7,9 @@ class Landing extends React.Component {
     title: "",
     url: "",
   };
-  displayList() {
+  displayList = () => {
     console.log("click!!");
+    console.log(this);
   }
   render() {
     return (
