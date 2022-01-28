@@ -14,7 +14,8 @@ class Landing extends React.Component {
   };
 
   getTitle = restaurant => {
-    console.log(restaurant);
+    const { title, url } = restaurant;
+    this.setState({ title, url, display: false })
   };
 
   render() {
