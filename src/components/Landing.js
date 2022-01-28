@@ -9,6 +9,7 @@ class Landing extends React.Component {
   };
   displayList = () => {
     const { display } = this.state;
+    this.setState({ display: !display });
   };
   render() {
     return (
@@ -25,13 +26,17 @@ class Landing extends React.Component {
             <div className="arrow_picker-down"></div>
           </div>
         </div>
-        <div className="restaurant_select_bottom">
-          <ul>
-            {restaurants.map((restaurant) => {
-              return <li key={restaurant.id}>{restaurant.title}</li>;
-            })}
-          </ul>
-        </div>
+
+        {this.state.display ? (
+          <div className="restaurant_select_bottom">
+            <ul>
+              {restaurants.map((restaurant) => {
+                return <li key={restaurant.id}>{restaurant.title}</li>;
+              })}
+            </ul>
+          </div>
+        ) : null}
+
         <button>Перейти в ресторан</button>
       </div>
     );
