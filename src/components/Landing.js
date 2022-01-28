@@ -7,10 +7,16 @@ class Landing extends React.Component {
     title: "",
     url: "",
   };
+
   displayList = () => {
     const { display } = this.state;
     this.setState({ display: !display });
   };
+
+  getTitle = restaurant => {
+    console.log(restaurant);
+  };
+
   render() {
     return (
       <div className="restaurant_select">
@@ -30,8 +36,11 @@ class Landing extends React.Component {
         {this.state.display ? (
           <div className="restaurant_select_bottom">
             <ul>
-              {restaurants.map((restaurant) => {
-                return <li key={restaurant.id}>{restaurant.title}</li>;
+              {restaurants.map(restaurant => {
+                return (
+                  <li onClick={()=>this.getTitle(restaurant)} key={restaurant.id}>
+                    {restaurant.title}
+                  </li>);
               })}
             </ul>
           </div>
