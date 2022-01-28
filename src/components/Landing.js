@@ -18,6 +18,10 @@ class Landing extends React.Component {
     this.setState({ title, url, display: false });
   };
 
+  goToRestaurant = () => {
+    console.log("go to restaurant!");
+  };
+
   render() {
     return (
       <div className="restaurant_select">
@@ -52,7 +56,7 @@ class Landing extends React.Component {
         ) : null}
 
         {this.state.title && !this.state.display ? (
-          <button>Перейти в ресторан</button>
+          <button onClick={this.goToRestaurant}>Перейти в ресторан</button>
         ) : null}
       </div>
     );
