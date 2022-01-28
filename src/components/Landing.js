@@ -26,7 +26,7 @@ class Landing extends React.Component {
             onClick={this.displayList}
             className="restaurant_select_top-header font-effect-outline"
           >
-            Выбери ресторан
+            {this.state.title ? this.state.title : 'Выбери ресторан'}
           </div>
           <div className="arrow_picker">
             <div className="arrow_picker-up"></div>
