@@ -8,9 +8,8 @@ class Landing extends React.Component {
     url: "",
   };
   displayList = () => {
-    console.log("click!!");
-    console.log(this);
-  }
+    const { display } = this.state;
+  };
   render() {
     return (
       <div className="restaurant_select">
