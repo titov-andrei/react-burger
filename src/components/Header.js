@@ -15,8 +15,8 @@ class Header extends React.Component {
             <h1 className="font-effect-fire-animation">Hot Burgers</h1>
             <h3>
               <span>
-                Быстрая доставка горячих
-                <span className="sub-header">#бургеров</span>
+                Быстрая доставка горячих 
+                <span className="sub-header"> #бургеров</span>
               </span>
             </h3>
 
