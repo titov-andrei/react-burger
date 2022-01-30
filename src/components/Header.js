@@ -1,8 +1,6 @@
 import React from "react";
 
-class Header extends React.Component {
-  render() {
-    return (
+const Header = props => (
       <header className="top">
         <div className="wrap">
           <div className="header-content">
@@ -12,7 +10,7 @@ class Header extends React.Component {
             </div>
 
             <div className="header-divider"></div>
-            <h1 className="font-effect-fire-animation">{this.props.title}</h1>
+            <h1 className="font-effect-fire-animation">{props.title}</h1>
             <h3>
               <span>
                 Быстрая доставка горячих 
@@ -24,7 +22,5 @@ class Header extends React.Component {
         </div>
       </header>
     );
-  }
-}
 
 export default Header;
