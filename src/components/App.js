@@ -10,6 +10,12 @@ class App extends React.Component {
   };
   addBurger = (burger) => {
     console.log("addBurger", burger);
+    // 1. Делаем копию объекта state
+    const burgers = { ...this.state.burgers };
+    // 2. Добавить новый бургер в переменную burgers
+    burgers[`burger${Date.now()}`] = burger;
+    // 3. Записать наш новый объект в state
+    this.setState({ burger });
   };
   render() {
     return (
