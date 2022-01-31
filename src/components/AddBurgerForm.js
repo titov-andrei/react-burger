@@ -8,12 +8,25 @@ class AddBurgerForm extends React.Component {
   imageRef = React.createRef();
   createBurger = (event) => {
     event.preventDefault();
-    console.log("add burger!!!");
+    const burger = {
+      name: this.nameRef.current.value,
+      price: parseFloat(this.priceRef.current.value),
+      status: this.statusRef.current.value,
+      desc: this.descRef.current.value,
+      image: this.imageRef.current.value,
+    };
+    console.log(burger);
   };
   render() {
     return (
       <form className="burger-edit" onSubmit={this.createBurger}>
-        <input ref={this.nameRef} name="name" type="text" placeholder="Name" autoComplete="off" />
+        <input
+          ref={this.nameRef}
+          name="name"
+          type="text"
+          placeholder="Name"
+          autoComplete="off"
+        />
         <input
           ref={this.priceRef}
           name="price"
