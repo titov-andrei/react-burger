@@ -2,6 +2,7 @@ import React from "react";
 
 class AddBurgerForm extends React.Component {
   createBurger = (event) => {
+    event.preventDefault();
     console.log("add burger!!!");
   };
   render() {
