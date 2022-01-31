@@ -1,9 +1,12 @@
 import React from "react";
 
 class AddBurgerForm extends React.Component {
+  createBurger = (event) => {
+    console.log("add burger!!!");
+  };
   render() {
     return (
-      <form>
+      <form className="burger-edit" onSubmit={this.createBurger}>
         <input name="name" type="text" placeholder="Name" autoComplete="off" />
         <input
           name="price"
@@ -22,6 +25,7 @@ class AddBurgerForm extends React.Component {
           placeholder="Image"
           autoComplete="off"
         />
+        <button type="submit">+ Добавить в Меню</button>
       </form>
     );
   }
