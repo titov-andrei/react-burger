@@ -1,6 +1,11 @@
 import React from "react";
 
 class AddBurgerForm extends React.Component {
+  nameRef = React.createRef();
+  priceRef = React.createRef();
+  statusRef = React.createRef();
+  descRef = React.createRef();
+  imageRef = React.createRef();
   createBurger = (event) => {
     event.preventDefault();
     console.log("add burger!!!");
