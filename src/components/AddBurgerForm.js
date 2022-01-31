@@ -13,19 +13,21 @@ class AddBurgerForm extends React.Component {
   render() {
     return (
       <form className="burger-edit" onSubmit={this.createBurger}>
-        <input name="name" type="text" placeholder="Name" autoComplete="off" />
+        <input ref={this.nameRef} name="name" type="text" placeholder="Name" autoComplete="off" />
         <input
+          ref={this.priceRef}
           name="price"
           type="text"
           placeholder="Price"
           autoComplete="off"
         />
-        <select name="status" className="status">
+        <select ref={this.statusRef} name="status" className="status">
           <option value="available">Доступно</option>
           <option value="unavailable">Убрать из меню</option>
         </select>
-        <textarea name="desc" placeholder="Desc" />
+        <textarea ref={this.descRef} name="desc" placeholder="Desc" />
         <input
+          ref={this.imageRef}
           name="image"
           type="text"
           placeholder="Image"
