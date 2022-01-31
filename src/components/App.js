@@ -15,7 +15,7 @@ class App extends React.Component {
     // 2. Добавить новый бургер в переменную burgers
     burgers[`burger${Date.now()}`] = burger;
     // 3. Записать наш новый объект в state
-    this.setState({ burger });
+    this.setState({ burgers });
   };
   render() {
     return (
