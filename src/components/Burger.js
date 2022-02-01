@@ -9,8 +9,9 @@ class Burger extends React.Component {
           <img src={image} alt={name} />
         </div>
         <div className="burger-details">
-          <h3 className="burger-name">{name}
-          <span className="price">{price}</span>
+          <h3 className="burger-name">
+            {name}
+            <span className="price">{price} ₽</span>
           </h3>
           <p>{desc}</p>
           <button className="buttonOrder">Заказать</button>
