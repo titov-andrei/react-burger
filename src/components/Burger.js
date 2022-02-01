@@ -2,7 +2,13 @@ import React from "react";
 
 class Burger extends React.Component {
   render() {
-    return <p>Burger Component</p>;
+    return (
+      <li className="menu-burger">
+        <div className="image-container">
+          <img src='{this.props.details.image}' alt="img"/>
+        </div>
+      </li>
+    );
   }
 }
 
