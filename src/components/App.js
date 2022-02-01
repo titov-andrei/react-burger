@@ -26,6 +26,9 @@ class App extends React.Component {
       <div className="burger-paradise">
         <div className="menu">
           <Header title="Very Hot Burger" />
+          <ul className="burgers">
+            <li>Burger</li>
+          </ul>
         </div>
         <Order />
         <MenuAdmin
