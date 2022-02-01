@@ -30,7 +30,7 @@ class App extends React.Component {
           <Header title="Very Hot Burger" />
           <ul className="burgers">
             {Object.keys(this.state.burgers).map(key => {
-              return <li>{key}</li>
+              return <li key={key}>{key}</li>
             })}
           </ul>
         </div>
