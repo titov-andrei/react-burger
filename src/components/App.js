@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Order from "./Order";
 import MenuAdmin from "./MenuAdmin";
+import sampleBurgers from "../sample-burgers";
 
 class App extends React.Component {
   state = {
@@ -18,7 +19,7 @@ class App extends React.Component {
     this.setState({ burgers });
   };
   loadSampleBurgers = () => {
-    console.log("Ready To Load!!!");
+    this.setState({ burgers: sampleBurgers });
   };
   render() {
     return (
