@@ -2,6 +2,8 @@ import React from "react";
 import Header from "./Header";
 import Order from "./Order";
 import MenuAdmin from "./MenuAdmin";
+import Burger from './Burger';
+
 import sampleBurgers from "../sample-burgers";
 
 class App extends React.Component {
@@ -27,7 +29,9 @@ class App extends React.Component {
         <div className="menu">
           <Header title="Very Hot Burger" />
           <ul className="burgers">
-            <li>Burger</li>
+            {Object.keys(this.state.burgers).map(key => {
+              return <li>key</li>
+            })}
           </ul>
         </div>
         <Order />
