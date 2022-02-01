@@ -17,6 +17,9 @@ class App extends React.Component {
     // 3. Записать наш новый объект в state
     this.setState({ burgers });
   };
+  loadSampleBurgers = () => {
+    console.log("Ready To Load!!!");
+  };
   render() {
     return (
       <div className="burger-paradise">
@@ -24,7 +27,10 @@ class App extends React.Component {
           <Header title="Very Hot Burger" />
         </div>
         <Order />
-        <MenuAdmin addBurger={this.addBurger} />
+        <MenuAdmin
+          addBurger={this.addBurger}
+          loadSampleBurgers={this.loadSampleBurgers}
+        />
       </div>
     );
   }
