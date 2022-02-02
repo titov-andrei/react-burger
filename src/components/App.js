@@ -23,6 +23,11 @@ class App extends React.Component {
   loadSampleBurgers = () => {
     this.setState({ burgers: sampleBurgers });
   };
+
+  addToOrder = (key) => {
+    
+  }
+
   render() {
     return (
       <div className="burger-paradise">
