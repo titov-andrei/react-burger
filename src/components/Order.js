@@ -5,7 +5,10 @@ class Order extends React.Component {
     const orderIds = Object.keys(this.props.order);
     const total = orderIds.reduce((prevTotal, key) => {
       const burger = this.props.burgers[key];
-    });
+      const count = this.props.order[key];
+      console.log('burger > ', burger)
+      console.log('count > ', count)
+    }, 0);
     return (
       <div className="order-wrap">
         <h2>Ваш Заказ</h2>
