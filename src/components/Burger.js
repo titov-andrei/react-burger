@@ -2,8 +2,8 @@ import React from "react";
 
 class Burger extends React.Component {
   handleClick = () => {
-    
-  }
+    console.log(">>>>>", this.props.index);
+  };
   render() {
     const { image, name, price, desc, status } = this.props.details;
     const isAvailable = status === "available";
@@ -18,7 +18,11 @@ class Burger extends React.Component {
             <span className="price">{price} ₽</span>
           </h3>
           <p>{desc}</p>
-          <button className="buttonOrder" disabled={!isAvailable} onClick={this.handleClick}>
+          <button
+            className="buttonOrder"
+            disabled={!isAvailable}
+            onClick={this.handleClick}
+          >
             {isAvailable ? "Заказать" : "Временно нет"}
           </button>
         </div>
