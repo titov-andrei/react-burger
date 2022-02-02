@@ -41,6 +41,7 @@ class App extends React.Component {
                 <Burger
                   key={key}
                   index={key}
+                  addToOrder={this.addToOrder}
                   details={this.state.burgers[key]}
                 />
               );
