@@ -1,6 +1,9 @@
 import React from "react";
 
 class Order extends React.Component {
+  renderOrder = (key) => {
+    return <li>{key}</li>;
+  };
   render() {
     const orderIds = Object.keys(this.props.order);
     const total = orderIds.reduce((prevTotal, key) => {
@@ -15,11 +18,7 @@ class Order extends React.Component {
     return (
       <div className="order-wrap">
         <h2>Ваш Заказ</h2>
-        <ul className="order">
-          {orderIds.map((key) => {
-            return <li>{key}</li>;
-          })}
-        </ul>
+        <ul className="order">{orderIds.map(this.renderOrder)}</ul>
         {total}
       </div>
     );
