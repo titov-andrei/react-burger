@@ -7,13 +7,13 @@ class Order extends React.Component {
     const isAvailable = burger && burger.status === "available";
     if (!isAvailable) {
       return (
-        <li className="unavailable">
+        <li className="unavailable" key={key}>
           Извините, {burger ? burger.name : "бургер"} временно недоступен
         </li>
       );
     }
     return (
-      <li>
+      <li key={key}>
         <span>
           <span>{count}</span>
           шт. {burger.name}
