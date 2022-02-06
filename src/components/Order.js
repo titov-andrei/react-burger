@@ -2,7 +2,25 @@ import React from "react";
 
 class Order extends React.Component {
   renderOrder = (key) => {
-    return <li>{key}</li>;
+    const burger = this.props.burgers[key];
+    const count = this.props.order[key];
+    const isAvailable = burger && burger.status === "available";
+    if (!isAvailable) {
+      return (
+        <li className="unavailable">
+          Извините, {burger ? burger.name : "бургер"} временно недоступен
+        </li>
+      );
+    }
+    return (
+      <li>
+        <span>
+          <span>{count}</span>
+          шт. {burger.name}
+          <span></span>
+        </span>
+      </li>
+    );
   };
   render() {
     const orderIds = Object.keys(this.props.order);
