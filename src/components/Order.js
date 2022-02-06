@@ -17,7 +17,8 @@ class Order extends React.Component {
         <span>
           <span>{count}</span>
           шт. {burger.name}
-          <span></span>
+          <span> {count * burger.price} ₽</span>
+          <button className="cancelItem">&times;</button>
         </span>
       </li>
     );
@@ -37,7 +38,11 @@ class Order extends React.Component {
       <div className="order-wrap">
         <h2>Ваш Заказ</h2>
         <ul className="order">{orderIds.map(this.renderOrder)}</ul>
-        {total}
+        <div className="total">
+          <div className="total_wrap">
+            <div className="total_wrap-final">Итого: {total} ₽</div>
+          </div>
+        </div>
       </div>
     );
   }
