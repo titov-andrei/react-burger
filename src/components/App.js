@@ -18,6 +18,13 @@ class App extends React.Component {
       state: "burgers",
     });
   }
+  componentDidUpdate() {
+    const { params } = this.props.match;
+    localStorage.setItem(params.restaurantId, JSON.stringify(this.state.order));
+  }
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
   addBurger = (burger) => {
     console.log("addBurger", burger);
     // 1. Делаем копию объекта state
