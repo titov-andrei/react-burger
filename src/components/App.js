@@ -13,6 +13,8 @@ class App extends React.Component {
   };
   componentDidMount() {
     const { params } = this.props.match;
+    const localStorageRef = localStorage.getItem(params.restaurantId);
+    this.setState({ order: JSON.parse(localStorageRef) });
     this.ref = base.syncState(`${params.restaurantId}/burgers`, {
       context: this,
       state: "burgers",
