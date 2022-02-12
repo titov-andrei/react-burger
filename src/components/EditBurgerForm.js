@@ -4,14 +4,18 @@ class EditBurgerForm extends React.Component {
   render() {
     return (
       <div className="burger-edit">
-        <input name='name' type='text' />
-        <input name='price' type='text' />
-        <select name='status'>
-          <option value='available'>Доступно!</option>
-          <option value='unavailable'>Не доступно!</option>
+        <input name="name" type="text" value={this.props.burger.name} />
+        <input name="price" type="text" value={this.props.burger.price} />
+        <select
+          className="status"
+          name="status"
+          value={this.props.burger.status}
+        >
+          <option value="available">Доступно!</option>
+          <option value="unavailable">Не доступно!</option>
         </select>
-        <input name='desc' type='text' />
-        <input name='image' type='text' />
+        <textarea name="desc" value={this.props.burger.desc} />
+        <input name="image" type="text" value={this.props.burger.image} />
       </div>
     );
   }
