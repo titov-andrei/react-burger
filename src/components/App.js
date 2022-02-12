@@ -70,6 +70,7 @@ class App extends React.Component {
         <MenuAdmin
           addBurger={this.addBurger}
           loadSampleBurgers={this.loadSampleBurgers}
+          burgers={this.state.burgers}
         />
       </div>
     );
