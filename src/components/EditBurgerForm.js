@@ -2,7 +2,10 @@ import React from "react";
 
 class EditBurgerForm extends React.Component {
   handleChange = (event) => {
-
+    const updatedBurger = {
+      ...this.props.burger,
+      [event.currentTarget.name]: event.currentTarget.value,
+    }
   }
   render() {
     return (
