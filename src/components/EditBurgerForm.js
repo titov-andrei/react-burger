@@ -1,12 +1,15 @@
 import React from "react";
 
 class EditBurgerForm extends React.Component {
+  handleChange = (event) => {
+
+  }
   render() {
     return (
       <div className="burger-edit">
-        <input onChange={} name="name" type="text" value={this.props.burger.name} />
-        <input onChange={} name="price" type="text" value={this.props.burger.price} />
-        <select onChange={}
+        <input onChange={this.handleChange} name="name" type="text" value={this.props.burger.name} />
+        <input onChange={this.handleChange} name="price" type="text" value={this.props.burger.price} />
+        <select onChange={this.handleChange}
           className="status"
           name="status"
           value={this.props.burger.status}
@@ -14,8 +17,8 @@ class EditBurgerForm extends React.Component {
           <option value="available">Доступно!</option>
           <option value="unavailable">Не доступно!</option>
         </select>
-        <textarea onChange={} name="desc" value={this.props.burger.desc} />
-        <input onChange={} name="image" type="text" value={this.props.burger.image} />
+        <textarea onChange={this.handleChange} name="desc" value={this.props.burger.desc} />
+        <input onChange={this.handleChange} name="image" type="text" value={this.props.burger.image} />
       </div>
     );
   }
