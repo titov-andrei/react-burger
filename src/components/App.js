@@ -43,6 +43,9 @@ class App extends React.Component {
     burgers[key] = updatedBurger;
     this.setState({ burgers });
   };
+  deleteBurger = (key) => {
+    const burgers = { ...this.state.burgers };
+  };
   loadSampleBurgers = () => {
     this.setState({ burgers: sampleBurgers });
   };
