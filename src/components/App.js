@@ -45,6 +45,8 @@ class App extends React.Component {
   };
   deleteBurger = (key) => {
     const burgers = { ...this.state.burgers };
+    burgers[key] = null;
+    this.setState({ burgers });
   };
   loadSampleBurgers = () => {
     this.setState({ burgers: sampleBurgers });
@@ -80,6 +82,7 @@ class App extends React.Component {
           loadSampleBurgers={this.loadSampleBurgers}
           burgers={this.state.burgers}
           updateBurger={this.updateBurger}
+          deleteBurger={this.deleteBurger}
         />
       </div>
     );
